@@ -1,0 +1,18 @@
+{% extends "FutbolApp/padre.html" %}
+
+{% load static %}
+
+{% block titulohead %}
+    FutbolApp - Jugadores
+{% endblock %}
+
+{% block titulo %}
+    JUGADORES
+{% endblock %}
+
+{% block botones %}
+    <a style="border: solid 1px;" href="{% url 'jugadoresFormulario' %}" class="w3-bar-item w3-button w3-padding-large">Agregar</a>
+    <a style="border: solid 1px;" href="{%url 'listarJugadores' %}" class="w3-bar-item w3-button w3-padding-large">Lista</a>
+
+{% endblock %}
+

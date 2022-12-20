@@ -1,0 +1,38 @@
+{% extends "FutbolApp/padre.html" %}
+
+{% load static %}
+
+{% block titulohead %}
+    FutbolApp - Jugadores
+{% endblock %}
+
+{% block titulo %}
+    ALTA DE JUGADORES
+{% endblock %}
+
+
+
+{% block parrafo %}
+    <p>Formulario de alta de jugadores</p>
+{% endblock %}
+
+
+
+{% block contenido %}
+
+<form action="{% url 'jugadoresFormulario' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+</form>
+<div style="text-align: center;">
+
+    <input type="submit" value="Agregar Jugardor" >
+    
+</div>
+
+
+
+{% endblock %}

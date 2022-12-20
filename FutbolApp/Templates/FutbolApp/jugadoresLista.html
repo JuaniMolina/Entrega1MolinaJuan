@@ -1,0 +1,23 @@
+{% extends "FutbolApp/padre.html" %}
+
+{% load static %}
+
+{% block titulohead %}
+    FutbolApp - Jugadores
+{% endblock %}
+
+{% block titulo %}
+    LISTA DE JUGADORES
+{% endblock %}
+    
+    {% block contenido %}
+
+{% for jugador in jugadores %}
+    <li>
+        {{ jugador.nombre }} {{ jugador.apellido }} 
+    </li>
+{% endfor %}
+
+    {% endblock %}
+
+
