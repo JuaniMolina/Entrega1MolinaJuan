@@ -1,0 +1,29 @@
+{% extends "FutbolApp/padre.html" %}
+
+{% load static %}
+
+{% block titulohead %}
+    FutbolApp - Lista de Clubes
+{% endblock %}
+
+{% block titulo %}
+    LISTA DE CLUBES
+{% endblock %}
+    
+{% block contenido %}
+
+    {% for club in clubes %}
+        <li>
+            {{ club.nombre }} - {{ club.pais }} 
+        </li>
+
+        <a style="border: solid 1px;" class="w3-bar-item w3-button w3-padding-large" href="{% url 'editarClub' club.id %}">Editar</a>
+        <a style="border: solid 1px;" class="w3-bar-item w3-button w3-padding-large" href="{% url 'eliminarClub' club.id %}">Eliminar</a>
+
+    {% endfor %}
+
+
+{% endblock %}
+
+{{ mensaje }}
+

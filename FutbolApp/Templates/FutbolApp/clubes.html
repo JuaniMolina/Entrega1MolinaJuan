@@ -14,4 +14,10 @@
     Aquí podrás encontrar información sobre los clubes de las ligas más importantes del mundo.
 {% endblock %}
 
+{% block botones %}
     
+    <a style="border: solid 1px;" href="{% url 'clubesFormulario' %}" class="w3-bar-item w3-button w3-padding-large">Agregar Club</a>
+    <a style="border: solid 1px;" href="{%url 'listarClubes' %}" class="w3-bar-item w3-button w3-padding-large">Lista de Clubes</a>
+    <a style="border: solid 1px;" href="{%url 'clubesBuscar' %}" class="w3-bar-item w3-button w3-padding-large">Buscar Clubes</a>
+
+{% endblock %}  

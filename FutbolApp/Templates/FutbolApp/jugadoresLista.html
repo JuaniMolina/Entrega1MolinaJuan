@@ -10,14 +10,20 @@
     LISTA DE JUGADORES
 {% endblock %}
     
-    {% block contenido %}
+{% block contenido %}
 
-{% for jugador in jugadores %}
-    <li>
-        {{ jugador.nombre }} {{ jugador.apellido }} 
-    </li>
-{% endfor %}
+    {% for jugador in jugadores %}
+        <li>
+            {{ jugador.nombre }} {{ jugador.apellido }} 
+        </li>
 
-    {% endblock %}
+        <a style="border: solid 1px;" class="w3-bar-item w3-button w3-padding-large" href="{% url 'editarJugador' jugador.id %}">Editar</a>
+        <a style="border: solid 1px;" class="w3-bar-item w3-button w3-padding-large" href="{% url 'eliminarJugador' jugador.id %}">Eliminar</a>
 
+    {% endfor %}
+
+
+{% endblock %}
+
+{{ mensaje }}
 

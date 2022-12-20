@@ -1,0 +1,27 @@
+{% extends "FutbolApp/padre.html" %}
+
+{% load static %}
+
+{% block titulohead %}
+    FutbolApp - Buscar Clubes
+{% endblock %}
+
+{% block titulo %}
+    BUSCAR CLUBES
+{% endblock %}
+
+{% block parrafo %}
+    Ingresa el nombre del club que deseas buscar.
+{% endblock %}
+
+{% block contenido %}
+    
+    <form action="{% url 'buscar_club' %}" method="GET">
+
+        <input type="text" name="nombre" id="nombre" placeholder="INSERTE NOMBRE">
+
+        <input type="submit" value="Buscar Club">
+
+    </form>
+    
+{% endblock %}

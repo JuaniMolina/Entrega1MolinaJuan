@@ -7,27 +7,27 @@
 {% endblock %}
 
 {% block titulo %}
-    AGREGAR JUGADORES
+    EDICION DE JUGADORES
 {% endblock %}
 
 
 
 {% block parrafo %}
-    <p>Complete todos los campos</p>
+    <p>Formulario de edicion de jugadores</p>
 {% endblock %}
-
 
 
 
 {% block contenido %}
-    <form action="{% url 'jugadoresFormulario' %}" method="POST"> {% csrf_token %}
+    <form action="{% url 'editarJugador' jugador.id %}" method="POST"> {% csrf_token %}
+        
         <table>
             {{ form.as_table }}
         </table>
+
         <div style="text-align: center;">
-            <input type="submit" value="Agregar Jugardor" >    
+            <input type="submit" value="Editar Jugardor" >
         </div>
+        
     </form>
 {% endblock %}
-
-
